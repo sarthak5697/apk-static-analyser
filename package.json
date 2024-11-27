@@ -1,0 +1,17 @@
+{
+  "name": "android-apk-comparator",
+  "version": "1.0.0",
+  "description": "Android APK Comparison Tool",
+  "scripts": {
+    "start:backend": "cd backend && .\\venv\\Scripts\\python server.py",
+    "start:frontend": "cd frontend && http-server . -p 5500 -c-1 -o /html/",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "setup": "npm install && npm run create-venv && npm run install-backend",
+    "create-venv": "cd backend && python -m venv venv",
+    "install-backend": "cd backend && .\\venv\\Scripts\\pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "http-server": "^0.12.3"
+  }
+}

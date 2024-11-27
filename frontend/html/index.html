@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Apk Comparator</title>
+    <link rel="stylesheet" href="/css/main-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>ANDROID APK COMPARATOR</h1>
+        <div class="forms-container">
+            <div class="form-wrapper" id="apkFormWrapper">
+                <h2>Compare Versions</h2>
+                <div class="form-content">
+                    <form id="apkForm">
+                        <label for="packageName">Select Package:</label>
+                        <select id="packageName" name="packageName">
+                            <option value="" disabled selected>Select package name</option>
+                        </select>
+
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-wrapper" id="compareFormWrapper">
+                <h2>Compare Different Apps</h2>
+                <div class="form-content">
+                    <form id="compareForm">
+                        <label for="packageName1">Select Application 1:</label>
+                        <select id="packageName1">
+                            <option value="" disabled selected>Select first package name</option>
+                        </select>
+                        <label for="packageName2">Select Application 2:</label>
+                        <select id="packageName2">
+                            <option value="" disabled selected>Select second package name</option>
+                        </select>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkbox-button-container sticky-container">
+            <label>
+                <input type="checkbox" id="highlightDifferences" name="comparisonOption" value="highlightDifferences">
+                Highlight Differences
+            </label>
+            <label>
+                <input type="checkbox" id="hideCommonFeatures" name="comparisonOption" value="hideCommonFeatures"> Hide
+                Common
+                Features
+            </label>
+        </div>
+
+        <div id="grid-container" class="empty-message">
+            <!-- Grid will be rendered here -->
+        </div>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+
+
+</body>
+
+</html>

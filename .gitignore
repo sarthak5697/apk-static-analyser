@@ -1,0 +1,3 @@
+node_modules/
+backend/rrtemp-db.sqlite3
+.vscode/
